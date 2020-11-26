@@ -7,7 +7,31 @@
 
 
     <h1>Liste des jeux</h1>
-    
+
+    <table class='table table-bordered table-hover table-striped'>
+        <thead class='thead-dark'>
+            <tr>
+                <th class='text-center px-1' scope='col'>Nom</th>
+                <th class='text-center px-1' scope='col'>Date de sortie</th>
+                <th class='text-center px-1' scope='col'>Genre</th>
+                <th class='text-center px-1' scope='col'>Platforme</th>
+                <th class='text-center px-1' scope='col'>Editeur</th>
+                <th class='text-center px-1' scope='col'>Developpeur</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for game in videogame %}
+            <tr>
+                <td>{{ game.title }}</td>
+                <td>{{ game.releaseDate }}</td>
+                <td>{{ game.genre|map(g =>"#{g.name}")|join(', ') }}</td>
+                <td>{{ game.platform.name }}</td>
+                <td>{{ game.publisher.name }}</td>
+                <td>{{ game.developer.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
 </div>
 {% endblock %}
