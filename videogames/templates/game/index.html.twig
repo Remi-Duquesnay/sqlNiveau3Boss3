@@ -28,6 +28,7 @@
                 <td>{{ game.platform.name }}</td>
                 <td>{{ game.publisher.name }}</td>
                 <td>{{ game.developer.name }}</td>
+                <td><a class="btn btn-primary mx-2" href="{# {{ path("admin.game.edit") }} #}"><i class='icofont-edit'></i></a></td> {# plutot faire une modal #}
             </tr>
         {% endfor %}
         </tbody>

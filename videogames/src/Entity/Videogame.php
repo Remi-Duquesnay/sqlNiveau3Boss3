@@ -70,7 +70,7 @@ class Videogame
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="Genre", mappedBy="videogame", fetch="EAGER")
+     * @ORM\ManyToMany(targetEntity="Genre", mappedBy="videogame")
      * 
      */
     private $genre;
